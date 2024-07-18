@@ -20,9 +20,9 @@ const sendVerifyMail = async (name, email, user_id) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      requireTLS: true,
+      port: 465,
+      secure: true,
+      // requireTLS: true,
       auth: {
         user: config.emailUser,
         pass: config.emailPassword,
